@@ -5,7 +5,9 @@ import (
 	"os"
 )
 
-func Logger() *logrus.Logger {
+var Log = logrus.New()
+
+func init() {
 	logger := logrus.New()
 	logger.SetReportCaller(true)
 	logger.SetFormatter(&logrus.JSONFormatter{
@@ -22,6 +24,4 @@ func Logger() *logrus.Logger {
 	} else {
 		logger.Info("Failed to log to file, using dsefault stderr")
 	}
-
-	return logger
 }

@@ -33,6 +33,7 @@ func Init(filename string) {
 			`passwordMatch:"[^"]+"`,
 			`token:"[^"]+"`,
 			`secret:"[^"]+"`,
+			`tranPassword:"[^"]+"`,
 		},
 		JSONFormatter: logrus.JSONFormatter{
 			DataKey: "data",
